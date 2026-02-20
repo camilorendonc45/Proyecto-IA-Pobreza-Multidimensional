@@ -1,0 +1,7 @@
+##  📦 Librerías necesarias para el proyecto de Pobreza Multidimensional
+pandas          # 🐼 Para el manejo y limpieza de bases de datos
+numpy           # 🔢 Para cálculos numéricos y arreglos
+scikit-learn    # 🤖 Para la Regresión Logística y Random Forest
+matplotlib      # 📊 Para crear los gráficos del análisis
+seaborn         # 🎨 Para visualizaciones estadísticas avanzadas
+xgboost         # 🚀 Para el modelo predictivo de alta precisión
