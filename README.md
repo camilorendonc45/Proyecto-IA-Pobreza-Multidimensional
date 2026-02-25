@@ -68,20 +68,63 @@
 ### 📋 Fuentes de Datos Oficiales
 * Encuesta Nacional de Calidad de Vida (ECV) y Gran Encuesta Integrada de Hogares (GEIH) del DANE.
 * Registro Social de Hogares (RSH) del DNP y variables espaciales de observación terrestre.
+* Universidad de los Andes. (2021). Encuesta Longitudinal Colombiana (ELCA)
 
 ### 🗂️ Variables Seleccionadas
 
-| Dimensión | Variables |
-| :--- | :--- |
-| **🌍 Geográfica** | CLASE (Urbano/Rural) |
-| **🎓 Capital Humano** | ANOS_ESC_PROM, REZA_ESCOLAR |
-| **💼 Mercado Laboral** | TASA_DEP_ECON, OCUPADOS_H |
-| **🏠 Vivienda y Servicios** | HACINAMIENTO, ACCESO_AGUA, ACCESO_INTERNET |
-| **🛡️ Vulnerabilidad** | NUM_MENORES, VICTIMA_CONFLICTO |
+# Estructura de Variables: Modelo Predictivo de Transiciones de Pobreza
+
+## 1. Variable de Respuesta ($y$)
+Es el objetivo de predicción del modelo (Target). Define la trayectoria del hogar entre dos rondas de la ELCA (Ronda $T$ y Ronda $T+1$).
+
+| Categoría | Nombre Técnico | Condición (Umbral IPM: 0.33) | Descripción Social |
+| :--- | :--- | :--- | :--- |
+| **0** | **Resiliente** | $IPM_T < 0.33$ y $IPM_{T+1} < 0.33$ | Hogares que se mantienen fuera de la pobreza. |
+| **1** | **Vulnerable** | $IPM_T < 0.33$ y $IPM_{T+1} \geq 0.33$ | **Entrada:** Hogares que caen en pobreza (Foco del modelo). |
+| **2** | **Movilidad** | $IPM_T \geq 0.33$ y $IPM_{T+1} < 0.33$ | **Salida:** Hogares que logran superar la pobreza. |
+| **3** | **Persistente** | $IPM_T \geq 0.33$ y $IPM_{T+1} \geq 0.33$ | **Crónica:** Hogares atrapados en la pobreza. |
 
 ---
+
+## 2. Variables de Control ($X_{control}$)
+Características estructurales utilizadas para garantizar que el modelo compare perfiles similares y aísle efectos externos.
+
+### Geográficas
+* **Zona:** Urbana o Rural (Cabecera vs. Resto).
+
+### Demográficas (Jefe de Hogar)
+* **Sexo:** Masculino o Femenino (Control de brecha de género).
+* **Edad:** Rango etario (18-28, 29-45, 46-60, 60+).
+* **Etnia:** Identificación étnica (Indígena, Afro, Rrom, Ninguna).
+
+### Estructura del Hogar
+* **Tamaño del Hogar:** Número total de integrantes.
+* **Tasa de Dependencia:** Relación entre niños/ancianos y adultos en edad de trabajar.
+
+---
+
+## 3. Variables Independientes
+
+### A. Indicadores Base de la ELCA
+* **Educación:** Bajo logro educativo del jefe y analfabetismo.
+* **Salud:** Falta de aseguramiento (EPS) y barreras de acceso al servicio.
+* **Trabajo:** Empleo informal y desempleo de larga duración.
+* **Vivienda:** Hacinamiento crítico, materiales de pisos/paredes.
+* **Servicios Públicos:** Falta de acceso a agua potable y alcantarillado.
+* **Niñez/Juventud:** Inasistencia escolar, rezago y trabajo infantil.
+
+### B. Factores de Vulnerabilidad
+* **Acceso a Internet:** Dicotómica (0/1). Predictor de capital informativo.
+* **Ingreso Monetario:** Ingreso neto per cápita del hogar.
+* **Tenencia de Vivienda:** Propia, arriendo o usufructo (Estabilidad de activos).
+* **Posesión de Activos:** Conteo de bienes (Computador, moto, cuenta de ahorros).
+* **Seguridad Alimentaria:** Indicador de choque extremo por falta de recursos.
+
+---
+
 
 ## 📚 Fuentes Bibliográficas
 * [Colombia MPI - OPHI](https://ophi.org.uk/national-mpi-directory/colombia-mpi)
 * [DANE - Índice de Pobreza Multidimensional 2022](https://microdatos.dane.gov.co/index.php/catalog/792)
 * [Visor Geográfico de Pobreza Multidimensional](https://centralpdet.renovacionterritorio.gov.co/visor-geografico-de-pobreza-multidimensional/)
+* Universidad de los Andes. (2021). Encuesta Longitudinal Colombiana (ELCA) [Conjunto de datos]. Facultad de Economía, Centro de Datos. https://economia.uniandes.edu.co/elca
