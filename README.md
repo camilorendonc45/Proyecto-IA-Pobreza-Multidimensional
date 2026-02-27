@@ -39,7 +39,7 @@
 * La calidad del dato se convierte, en este contexto, en un determinante fundamental de la robustez predictiva. Por eso se va a trabajar con la ELCA, ya que esta encuesta realiza un seguimiento al mismo hogar; sin embargo, en esta lo dificil es la periodicidad ya que se ha realizado en 2010, 2013 y 2016.
 
 ### 📍 Integración de Factores de Expansión y Heterogeneidad Espacial
-* Las encuestas del DANE incorporan factores de expansión para extrapolar resultados a nivel poblacional.
+* Las encuestas incorporan factores de expansión para extrapolar resultados a nivel poblacional.
 * Se implementará entrenamiento ponderado utilizando parámetros *sample_weight* y validación cruzada estratificada respetando el diseño muestral para capturar el contexto territorial.
 
 ### Armonización Longitudinal: 
