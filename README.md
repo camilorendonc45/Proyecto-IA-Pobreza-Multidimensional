@@ -6,7 +6,7 @@
 
 ## 📌 Descripción del Problema y Objetivos
 
-* **🎯 Objetivo:** Desarrollar un modelo predictivo sobre la pobreza multidimensional en el cual se busca identificar y estimar la probabilidad de que un hogar caiga o salga de la situación de pobreza multidimensional en Colombia a partir de variables socioeconómicas, demográficas y de acceso a servicios básicos.
+* **🎯 Objetivo:** Desarrollar un modelo predictivo sobre la pobreza multidimensional en el cual se busca identificar y estimar la probabilidad de que un hogar caiga o salga de la situación de pobreza multidimensional en Colombia a partir de variables socioeconómicas, demográficas y de acceso a servicios básicos que están en la encuesta ELCA.
 * Este modelo busca anticipar escenarios de vulnerabilidad social, mejorar la focalización de políticas públicas y programas sociales, y apoyar la toma de decisiones basada en evidencia por parte de las instituciones del Estado.
 * Asimismo, el modelo permite analizar la importancia relativa de los distintos determinantes de la pobreza multidimensional, contribuyendo a una comprensión más profunda de sus causas estructurales y facilitando el diseño de estrategias de intervención más eficientes y equitativas.
 
