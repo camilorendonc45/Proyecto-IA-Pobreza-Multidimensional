@@ -36,10 +36,19 @@
 * La integración de fuentes oficiales heterogéneas (ECV, GEIH, RSH y datos espaciales) introduce complejidades estructurales.
 * Los desafíos incluyen diferencias en periodicidad, inconsistencias operativas y datos faltantes no aleatorios.
 * El proceso de desarrollo incluirá armonización conceptual de variables, técnicas de imputación múltiple y validación cruzada entre fuentes.
+* La calidad del dato se convierte, en este contexto, en un determinante fundamental de la robustez predictiva. Por eso se va a trabajar con la ELCA, ya que esta encuesta realiza un seguimiento al mismo hogar; sin embargo, en esta lo dificil es la periodicidad ya que se ha realizado en 2010, 2013 y 2016.
 
 ### 📍 Integración de Factores de Expansión y Heterogeneidad Espacial
 * Las encuestas del DANE incorporan factores de expansión para extrapolar resultados a nivel poblacional.
 * Se implementará entrenamiento ponderado utilizando parámetros *sample_weight* y validación cruzada estratificada respetando el diseño muestral para capturar el contexto territorial.
+
+### Armonización Longitudinal: 
+* Alinear las mismas variables a través de diferentes rondas de la ELCA (2010-2021) pese a cambios en los cuestionarios.
+### Construcción del Índice: 
+* Generar los 15 indicadores de privación desde variables crudas, ya que la ELCA no entrega el IPM precalculado.
+### Desbalanceo de Clases: 
+* Manejar el hecho de que la mayoría de los hogares son "estables", mientras que los eventos de "entrada" o "salida" son menos frecuentes, lo que puede sesgar al modelo.
+
 
 ---
 
