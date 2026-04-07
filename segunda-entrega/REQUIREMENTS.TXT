@@ -1,0 +1,25 @@
+# =========================================
+# Requirements - Proyecto IA Economía
+# =========================================
+
+# Manipulación y procesamiento de datos
+pandas
+numpy
+
+# Visualización de datos
+matplotlib
+seaborn
+
+# Machine Learning y transformación de variables
+scikit-learn
+
+# Estadística y análisis (si se utilizó en el proyecto)
+scipy
+statsmodels
+
+# Entorno de trabajo
+jupyter
+
+# Nota:
+# - 'os' y 'warnings' son librerías estándar de Python (no se incluyen)
+# - 'google.colab' es específico de Colab y no se requiere para ejecución local
