@@ -1,6 +1,6 @@
 # 📉 Modelamiento Predictivo de la Vulnerabilidad Multidimensional para la Optimización de la Política Social en Colombia
 
-**👥 Integrantes:** Camilo Rendon, Nicolás cubillos y Talia Linares
+**👥 Integrantes:** Camilo Rendon, Nicolás cubillos, Alejandro Velandia y Talia Linares
 
 ---
 
